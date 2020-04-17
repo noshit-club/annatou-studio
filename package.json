@@ -1,0 +1,40 @@
+{
+  "name": "gatsby-datocms-annatou-studio",
+  "description": "Annatou Studio's portfolio",
+  "version": "1.0.0",
+  "author": "Loïc Verstaevel <loic@noshit.club>",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.20.12",
+    "gatsby-image": "^2.3.1",
+    "gatsby-plugin-google-analytics": "^2.2.2",
+    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-sass": "^2.2.1",
+    "gatsby-plugin-sharp": "^2.4.0",
+    "gatsby-source-datocms": "^2.1.29",
+    "gatsby-source-filesystem": "^2.2.2",
+    "gatsby-transformer-remark": "^2.7.1",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-easy-swipe": "^0.0.18",
+    "react-helmet": "^5.2.0",
+    "react-masonry-component": "^6.2.1"
+  },
+  "keywords": [
+    "gatsby",
+    "datocms",
+    "netlify",
+    "sass"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
+  },
+  "devDependencies": {
+    "prettier": "^2.0.2"
+  }
+}

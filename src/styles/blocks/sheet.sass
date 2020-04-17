@@ -1,0 +1,173 @@
+.sheet
+  padding: $gutter $gutter/2
+  background-color: #f9f9f9
+  min-height: 100%
+
+  *:last-child 
+    margin-bottom: 0
+
+.sheet__title
+  font-size: .875em
+  text-transform: uppercase
+  margin-bottom: $gutter
+  font-weight: bold
+  color: $dark-grey
+  line-height: 1
+
+.sheet__lead
+  font-size: $gutter/2
+  margin-bottom: $gutter*2/3
+  font-size: 1.25em
+  font-family: $headings-font-family
+  font-weight: 400
+
+.sheet__gallery
+  margin-bottom: $gutter
+  width: 100%
+  max-width: 1200px
+
+  .gatsby-image-wrapper 
+    display: block
+    margin-bottom: $gutter
+
+    &:last-child 
+      margin-bottom: 0
+
+.sheet__body
+  margin-bottom: $gutter
+  font-size: .8125em
+
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol
+    margin-bottom: $gutter*1/3
+
+    &:last-child
+      margin-bottom: 0
+
+  h1, h2, h3, h4, h5, h6
+    font-weight: bold
+    margin: $gutter 0 $gutter*1/4
+    color: $dark-grey
+    text-transform: uppercase
+    font-size: $base-font-size
+
+  p 
+    margin-bottom: $gutter/2
+
+  li
+    margin-left: $gutter/2
+    margin-bottom: $gutter/6
+
+  ol li
+    list-style-type: decimal
+
+  ul li
+    list-style-type: disc
+
+.sheet__maow
+  .sheet__body 
+    p
+      @extend %clearfix
+
+      img 
+        width: 100%
+
+.embed-container
+  position: relative
+  padding-bottom: 56.25%
+  height: 0
+  overflow: hidden
+  max-width: 100%
+  margin-bottom: $gutter*2/3
+  
+  iframe,
+  object,
+  embed
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.sheet__art 
+  background: none
+  padding-left: 0
+  padding-top: 0
+
+  .showcase
+    margin-right: 0
+
+  .sheet__gallery
+    @extend %clearfix
+    width: auto
+    max-width: none
+  
+  .gatsby-image-wrapper
+    height: 100%
+
+  .showcase__item
+    height: 25vh
+    max-height: 200px
+    overflow: hidden
+
+    img 
+      left: 50% !important
+      top: 50% !important
+      transform: translate(-50%, -50%)
+      max-width: none
+
+@media screen and (max-width: $tablet)
+  .sheet 
+    padding: $gutter/2
+
+  .sheet__body 
+    margin-bottom: $gutter*2/3
+
+  .sheet__title,
+  .sheet__lead 
+    margin-bottom: $gutter/4
+
+  .sheet__lead 
+    font-size: 1em
+
+  .sheet__gallery
+    .gatsby-image-wrapper 
+      margin-bottom: $gutter/2
+
+  .sheet__art 
+    padding-left: 0
+    padding-top: 0
+
+@media screen and (min-width: $tablet)
+  .sheet 
+    padding: $gutter*3/2
+
+  .sheet__body p
+    margin-bottom: $gutter*2/3
+
+  .sheet__art 
+    padding: 0 !important
+    padding-right: $gutter !important
+
+@media screen and (min-width: $laptop-medium)
+  .sheet 
+    padding-top: $gutter*2
+
+  &:not(.sheet__art) 
+    .sheet__inner
+      > *:not(.sheet__gallery)
+        max-width: 600px
+    
+  .sheet__maow
+    .sheet__body 
+      p
+        img 
+          display: block
+          width: calc(50% - #{$gutter/3})
+          float: left
+          margin-bottom: 0
+
+          &:first-child
+            margin-right: $gutter/3
+
+          &:last-child
+            margin-left: $gutter/3

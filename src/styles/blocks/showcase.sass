@@ -1,0 +1,36 @@
+.showcase.is-loading
+  visibility: hidden
+
+.showcase
+    margin-right: $gutter/2
+
+.showcase__item
+  display: block
+  margin-bottom: $gutter
+  text-decoration: none
+  width: (100% / 2)
+  float: left
+  padding-left: $gutter/2
+  margin-bottom: $gutter/2
+
+@media screen and (min-width: $tablet)
+  .showcase
+    padding: $gutter*3/2 0 $gutter
+    margin-right: $gutter
+
+  .showcase__item
+    padding-left: $gutter*2/3
+    margin-bottom: $gutter*2/3
+  
+@media screen and (min-width: $laptop-medium)
+  .showcase
+    margin-right: $gutter*3/2
+
+    .showcase__item
+      width: (100% / 3)
+
+@media screen and (min-width: $laptop-large)
+  .showcase
+    .showcase__item
+      width: (100% / 4)
+

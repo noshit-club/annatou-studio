@@ -1,0 +1,34 @@
+$light-bg-color: #ffffff
+$dark-grey: #212121
+$base-body-color: #1e1e1e
+$light-grey: #adadad
+$light-grey-icon: #d1d1d1
+$light-grey-background: #f9f9f9
+$active-color: #0000ff
+
+$base-font-size: 16px
+$gutter: 36px
+$headings-font-family: 'Gotu', 'Lucida Grande', sans-serif
+$animation-speed: .2s
+
+$tablet: 1024px
+$laptop: 1100px
+$laptop-medium: 1400px
+$laptop-large: 1800px
+
+%clearfix 
+  &:after 
+    content: "";
+    display: table;
+    clear: both;
+
+%a11y-visually-hidden 
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+
+.a11y-visually-hidden
+    @extend %a11y-visually-hidden

@@ -1,0 +1,89 @@
+.card
+  position: relative
+  overflow: hidden
+  color: $dark-grey
+  transition: all $animation-speed*2 ease-in-out 0s
+
+.card__image
+  display: block
+  position: relative
+
+  .gatsby-image-wrapper
+    z-index: 1
+    display: none
+    max-width: 100% !important
+    height: auto !important
+    width: auto !important
+
+    picture img 
+      position: static !important
+
+    &.default
+      display: block !important
+
+    &.on 
+      z-index: 2 !important
+
+  img
+    display: block
+    user-select: none
+
+.card__caption
+  background-color: white
+  padding: $gutter/3 0 0
+  width: 100%
+  overflow: hidden
+  transition: transform $animation-speed*2 ease-in-out 0s
+
+  > div 
+    transition: transform $animation-speed*2 ease-in-out 0s
+
+.card__title
+  text-transform: uppercase
+  font-weight: 700
+  font-size: .875em
+  transition: color $animation-speed*2 ease-in-out
+
+  &:only-child
+    margin-bottom: 0
+
+.card__description
+  font-size: .8125em
+
+.showcase__item:hover 
+  .card__caption
+    transform: translateY(0)
+
+    > div 
+      transform: translateY(0)
+
+@media screen and (max-width: 599px)
+  .card__caption
+    display: none
+    padding: $gutter/6 0 0
+    background: rgba(#ffffff, .8)
+
+  .card__title
+    font-size: .625em
+
+  .card__description 
+    display: none
+
+@media screen and (min-width: $tablet)
+  .card__caption
+    position: absolute
+    z-index: 2
+    bottom: 0
+    left: 0
+    transform: translateY(100%)
+
+    > div 
+      transform: translateY(-200%)
+
+  .card__image
+    .gatsby-image-wrapper
+      display: block !important
+      width: 100% !important
+      
+      &:not(:first-of-type) 
+        height: 100% !important
