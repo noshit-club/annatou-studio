@@ -2,10 +2,10 @@
   "name": "Annatou Studio's Portfolio Website",
   "description": "Annatou Studio's portfolio website built with Gatsby.js and DatoCMS source plugin",
   "previewImage": "TBD",
-  "datocmsProjectId": "",
+  "datocmsProjectId": "26059",
   "deploymentType": "static",
   "buildCommand": "yarn build",
-  "datocmsApiTokenEnvName": "DATO_API_TOKEN",
+  "datocmsApiTokenEnvName": "819ed6e1d90d51daa89e47fddc223d",
   "buildDirectory": "public",
   "livePreviewUrl": "https://TBD.netlify.app/"
 }
