@@ -3,11 +3,13 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `Annatou Studio's portfolio`,
+    siteUrl: `https://anna-touvron.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-datocms`,
       options: {
