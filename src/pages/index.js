@@ -33,8 +33,8 @@ const IndexPage = ({ data }) => (
                 msFilter: `blur(6px`,
                 OFilter: `blur(6px)`
               }} /> 
-              {work.gallery.map(({ fluid }) => (
-                <Img fluid={fluid} key={fluid.src} fadeIn={false} style={{
+              {work.gallery.map(({ fixed }) => (
+                <Img fixed={fixed} key={fixed.src} fadeIn={false} style={{
                   position: `absolute`,
                   top: 0,
                   bottom: 0,
@@ -86,8 +86,8 @@ export const query = graphql`
             }
           }
           gallery {
-            fluid(maxWidth: 360, imgixParams: { fm: "jpg", auto: "compress" }) {
-              ...GatsbyDatoCmsFluid
+            fixed(width: 360, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsFixed_noBase64
             }
           }
         }
