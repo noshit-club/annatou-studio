@@ -26,15 +26,15 @@ const IndexPage = ({ data }) => (
         }}>
           <figure className="card">
             <div className="card__image">
-              <Img fixed={work.coverImage.fixed} className="default on" durationFadeIn={400} placeholderStyle={{
+              <Img fluid={work.coverImage.fluid} className="default on" durationFadeIn={400} placeholderStyle={{
                 filter: `blur(6px)`,
                 WebkitFilter: `blur(6px)`,
                 MozFilter: `blur(6px)`,
                 msFilter: `blur(6px`,
                 OFilter: `blur(6px)`
               }} /> 
-              {work.gallery.map(({ fixed }) => (
-                <Img fixed={fixed} key={fixed.src} fadeIn={false} style={{
+              {work.gallery.map(({ fluid }) => (
+                <Img fluid={fluid} key={fluid.src} fadeIn={false} style={{
                   position: `absolute`,
                   top: 0,
                   bottom: 0,
@@ -81,13 +81,13 @@ export const query = graphql`
           slug
           excerpt
           coverImage {
-            fixed(width: 400, imgixParams: { fm: "jpg", auto: "compress" }) {
-              ...GatsbyDatoCmsFixed
+            fluid(maxWidth: 360, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsFluid
             }
           }
           gallery {
-            fixed(width: 400, imgixParams: { fm: "jpg", auto: "compress" }) {
-              ...GatsbyDatoCmsFixed
+            fluid(maxWidth: 360, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsFluid
             }
           }
         }
