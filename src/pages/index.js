@@ -86,7 +86,7 @@ export const query = graphql`
             }
           }
           gallery {
-            fixed(width: 360, imgixParams: { fm: "jpg", auto: "compress" }) {
+            fixed(width: 640, imgixParams: { fm: "jpg", auto: "compress" }) {
               ...GatsbyDatoCmsFixed_noBase64
             }
           }
