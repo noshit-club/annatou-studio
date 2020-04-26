@@ -46,6 +46,9 @@ const TemplateWrapper = ({ children, location }) => {
           <HelmetDatoCms
             favicon={data.datoCmsSite.faviconMetaTags}
             seo={data.datoCmsHome.seoMetaTags}
+            meta={[
+              { name: 'google-site-verification', content: 'wGHx5IrPbmlhqb3V5wyTylFhcsWhVAjI6qol0uHZGWk' }
+            ]}
           />
           <div className="container__sidebar">
             <div className="sidebar">
