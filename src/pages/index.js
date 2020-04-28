@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => (
       <Masonry className="showcase">
       {data.allDatoCmsWork.edges.map(({ node: work }) => (
         <Link to={`/works/${work.slug}`} key={work.id} className="showcase__item" 
-        onMouseMove={e => { 
+        onPointerMove={e => { 
           const thumbnailWrapper = e.currentTarget;
           const nbImages = thumbnailWrapper.querySelectorAll('.gatsby-image-wrapper').length;
           const posX = e.pageX - thumbnailWrapper.getBoundingClientRect().left;
@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => (
           thumbnailWrapper.querySelector('.on').classList.remove('on');
           thumbnailWrapper.querySelectorAll('.gatsby-image-wrapper')[currentIndex].classList.add('on');
         }} 
-        onMouseLeave={e => { 
+        onPointerLeave={e => { 
           e.currentTarget.querySelector('.on').classList.remove('on');
           e.currentTarget.querySelector('.gatsby-image-wrapper').classList.add('on');
         }}>

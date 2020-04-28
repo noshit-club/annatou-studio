@@ -1,7 +1,11 @@
+.showcase__item
+  cursor: pointer
+
 .card
   position: relative
   overflow: hidden
   color: $dark-grey
+  cursor: pointer
   transition: all $animation-speed*2 ease-in-out 0s
 
 .card__image
@@ -47,13 +51,6 @@
 .card__description
   font-size: .8125em
 
-.showcase__item:hover 
-  .card__caption
-    transform: translateY(0)
-
-    > div 
-      transform: translateY(0)
-
 @media screen and (max-width: 599px)
   .card__caption
     display: none
@@ -67,6 +64,13 @@
     display: none
 
 @media screen and (min-width: $tablet)
+  .showcase__item:hover 
+    .card__caption
+      transform: translateY(0)
+
+      > div 
+        transform: translateY(0)
+
   .card__caption
     position: absolute
     z-index: 2
