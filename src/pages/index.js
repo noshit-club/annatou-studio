@@ -4,6 +4,25 @@ import Masonry from 'react-masonry-component'
 import Img from 'gatsby-image'
 import Layout from "../components/layout"
 
+function isTouch() {
+  try {
+      let prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+
+      let mq = function (query) {
+          return window.matchMedia(query).matches;
+      };
+
+      if (('ontouchstart' in window) || (typeof window.DocumentTouch !== "undefined" && document instanceof window.DocumentTouch)) {
+          return true;
+      }
+
+      return mq(['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join(''));
+  } catch (e) {
+      console.error('(Touch detect failed)', e);
+      return false;
+  }
+}
+
 const IndexPage = ({ data }) => (
   <Layout>
     <article>
@@ -11,20 +30,16 @@ const IndexPage = ({ data }) => (
       <Masonry className="showcase">
       {data.allDatoCmsWork.edges.map(({ node: work }) => (
         <Link to={`/works/${work.slug}`} key={work.id} className="showcase__item" 
-        onTouchEnd={
-          e => {
-
-          }
-        }
         onPointerMove={e => { 
-          e.preventDefault();
-          const thumbnailWrapper = e.currentTarget;
-          const nbImages = thumbnailWrapper.querySelectorAll('.gatsby-image-wrapper').length;
-          const posX = e.pageX - thumbnailWrapper.getBoundingClientRect().left;
-          let currentIndex = Math.floor(posX / (parseFloat(getComputedStyle(thumbnailWrapper, null).width.replace("px", "")) / nbImages));
-          currentIndex = currentIndex < 0 ? 0 : currentIndex;
-          thumbnailWrapper.querySelector('.on').classList.remove('on');
-          thumbnailWrapper.querySelectorAll('.gatsby-image-wrapper')[currentIndex].classList.add('on');
+          if ( !isTouch() ) {
+            const thumbnailWrapper = e.currentTarget;
+            const nbImages = thumbnailWrapper.querySelectorAll('.gatsby-image-wrapper').length;
+            const posX = e.pageX - thumbnailWrapper.getBoundingClientRect().left;
+            let currentIndex = Math.floor(posX / (parseFloat(getComputedStyle(thumbnailWrapper, null).width.replace("px", "")) / nbImages));
+            currentIndex = currentIndex < 0 ? 0 : currentIndex;
+            thumbnailWrapper.querySelector('.on').classList.remove('on');
+            thumbnailWrapper.querySelectorAll('.gatsby-image-wrapper')[currentIndex].classList.add('on');              
+          }
         }} 
         onPointerLeave={e => { 
           e.currentTarget.querySelector('.on').classList.remove('on');
