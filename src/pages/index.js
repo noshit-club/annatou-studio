@@ -11,7 +11,13 @@ const IndexPage = ({ data }) => (
       <Masonry className="showcase">
       {data.allDatoCmsWork.edges.map(({ node: work }) => (
         <Link to={`/works/${work.slug}`} key={work.id} className="showcase__item" 
+        onTouchEnd={
+          e => {
+
+          }
+        }
         onPointerMove={e => { 
+          e.preventDefault();
           const thumbnailWrapper = e.currentTarget;
           const nbImages = thumbnailWrapper.querySelectorAll('.gatsby-image-wrapper').length;
           const posX = e.pageX - thumbnailWrapper.getBoundingClientRect().left;
