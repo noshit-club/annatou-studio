@@ -83,7 +83,7 @@ const TemplateWrapper = ({ children, location }) => {
               <div className="sidebar__footer">
                 <p>
                   Based in Brussels, Belgium<br/>
-                  <a href="mailto:hello@anna-touvron.com" target="_blank" rel="noopener noreferrer">hello@anna-touvron.com</a><br/> 
+                  <a href="mailto:touvron.anna@gmail.com" target="_blank" rel="noopener noreferrer">touvron.anna@gmail.com</a><br/> 
                   <a href="tel:0032493859106" target="_blank" rel="noopener noreferrer">+32 (0)493 85 91 06</a>
                 </p> 
                 <p>{new Date().getFullYear()} &copy; Annatou Studio</p>
