@@ -1,7 +1,7 @@
 .sidebar__title
   margin-bottom: $gutter*2/3
-  
-  img 
+
+  img
     display: block
     height: auto
 
@@ -19,7 +19,7 @@
   color: $active-color
   font-weight: 400
   max-width: 520px
- 
+
 .sidebar__menu
   margin-top: -4px
   margin-bottom: $gutter
@@ -45,10 +45,10 @@
   color: $light-grey
   font-size: 13px
 
-  p 
+  p
     margin-bottom: 0
 
-  a 
+  a
     color: inherit
     text-decoration: none
     transition: all $animation-speed ease-in-out
@@ -66,23 +66,23 @@
   border-radius: 50%
   position: relative
 
-  img  
+  img
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
     height: 55%
 
-  &.social--behance img 
+  &.social--behance img
       height: 50%
 
-  &.social--instagram img 
+  &.social--instagram img
       height: 65%
 
 @media screen and (max-width: 599px)
   .sidebar__menu
     margin-bottom: $gutter/2
-    
+
     li
       a
         font-size: .8125em
@@ -91,7 +91,7 @@
   .sidebar__title
     margin-bottom: $gutter/2
 
-    img  
+    img
       width: 40px
       height: 40px
 
@@ -101,7 +101,7 @@
 
   .sidebar__social
     margin-top: $gutter/4
-  
+
   .sidebar__footer
     font-size: .75em
 
@@ -112,14 +112,40 @@
   .social
     &:hover
       background: $active-color
-  
+
   .sidebar__footer
     position: absolute
     bottom: 0
-    left: 00
-  
+    left: 0
+
 @media screen and (min-width: $laptop-medium)
   .sidebar__intro
     font-size: 1.25em
 
+@media screen and (min-width: $tablet) and (max-height: 780px)
+  .sidebar__intro
+    margin-bottom: $gutter/2
 
+@media screen and (min-width: $tablet) and (max-height: 720px)
+  .sidebar__intro
+    font-size: 1em
+
+@media screen and (min-width: $tablet) and (max-height: 630px)
+  .sidebar__social
+    margin-top: $gutter/4
+
+@media screen and (min-width: $tablet) and (max-height: 620px)
+  .sidebar__title
+    margin-bottom: $gutter/2
+  .sidebar__social
+    margin-top: $gutter/4
+
+@media screen and (min-width: $tablet) and (max-height: 620px)
+  .sidebar__intro
+    margin-bottom: $gutter/3
+  .sidebar__menu li a
+    padding: 2px 0
+
+@media screen and (min-width: $tablet) and (max-height: 580px)
+  .sidebar__footer
+    font-size: .7em
