@@ -3,7 +3,7 @@
   background-color: #f9f9f9
   min-height: 100%
 
-  *:last-child 
+  *:last-child
     margin-bottom: 0
 
 .sheet__title
@@ -16,7 +16,7 @@
 
 .sheet__lead
   font-size: $gutter/2
-  margin-bottom: $gutter*2/3
+  margin-bottom: $gutter
   font-size: 1.25em
   font-family: $headings-font-family
   font-weight: 400
@@ -26,11 +26,11 @@
   width: 100%
   max-width: 1200px
 
-  .gatsby-image-wrapper 
+  .gatsby-image-wrapper
     display: block
     margin-bottom: $gutter
 
-    &:last-child 
+    &:last-child
       margin-bottom: 0
 
 .sheet__body
@@ -50,7 +50,7 @@
     text-transform: uppercase
     font-size: $base-font-size
 
-  p 
+  p
     margin-bottom: $gutter/2
 
   li
@@ -64,11 +64,11 @@
     list-style-type: disc
 
 .sheet__maow
-  .sheet__body 
+  .sheet__body
     p
       @extend %clearfix
 
-      img 
+      img
         width: 100%
 
 .embed-container
@@ -78,7 +78,7 @@
   overflow: hidden
   max-width: 100%
   margin-bottom: $gutter*2/3
-  
+
   iframe,
   object,
   embed
@@ -88,19 +88,18 @@
     width: 100%
     height: 100%
 
-.sheet__art 
-  background: none
+.sheet__art, .sheet__exhibitions
   padding-left: 0
-  padding-top: 0
 
   .showcase
-    margin-right: 0
+    margin-left: 0
+    padding-top: 0
 
   .sheet__gallery
     @extend %clearfix
     width: auto
     max-width: none
-  
+
   .gatsby-image-wrapper
     height: 100%
 
@@ -109,58 +108,58 @@
     max-height: 200px
     overflow: hidden
 
-    img 
+    img
       left: 50% !important
       top: 50% !important
       transform: translate(-50%, -50%)
       max-width: none
 
 @media screen and (max-width: $tablet)
-  .sheet 
+  .sheet
     padding: $gutter/2
 
-  .sheet__body 
+  .sheet__body
     margin-bottom: $gutter*2/3
 
   .sheet__title,
-  .sheet__lead 
-    margin-bottom: $gutter/4
+  .sheet__lead
+    margin-bottom: $gutter/2
 
-  .sheet__lead 
+  .sheet__lead
     font-size: 1em
 
   .sheet__gallery
-    .gatsby-image-wrapper 
+    .gatsby-image-wrapper
       margin-bottom: $gutter/2
 
-  .sheet__art 
-    padding-left: 0
-    padding-top: 0
+  .sheet__art, .sheet__exhibitions
+    padding-right: 0
+    .sheet__lead
+      padding-right: $gutter/2
 
 @media screen and (min-width: $tablet)
-  .sheet 
+  .sheet
     padding: $gutter*3/2
 
   .sheet__body p
     margin-bottom: $gutter*2/3
 
-  .sheet__art 
-    padding: 0 !important
-    padding-right: $gutter !important
+  .sheet__art, .sheet__exhibitions
+    padding-right: $gutter*.83333333 !important
 
 @media screen and (min-width: $laptop-medium)
-  .sheet 
+  .sheet
     padding-top: $gutter*2
 
-  &:not(.sheet__art) 
+  &:not(.sheet__art):not(.sheet__exhibitions)
     .sheet__inner
       > *:not(.sheet__gallery)
         max-width: 600px
-    
+
   .sheet__maow
-    .sheet__body 
+    .sheet__body
       p
-        img 
+        img
           display: block
           width: calc(50% - #{$gutter/3})
           float: left

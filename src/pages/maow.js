@@ -8,7 +8,7 @@ const Maow = ({ data: { page } }) => (
     <article className="sheet sheet__maow">
       <HelmetDatoCms seo={page.seoMetaTags} />
       <div className="sheet__inner">
-        <h1 className="sheet__title">{page.title}</h1>
+        <h1 className="sheet__title a11y-visually-hidden">{page.title}</h1>
         <p className="sheet__lead">{page.subtitle}</p>
         <div
           className="sheet__body"

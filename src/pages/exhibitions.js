@@ -10,12 +10,7 @@ const Exhibitions = ({ data: { exhibitions } }) => (
       <HelmetDatoCms seo={exhibitions.seoMetaTags} />
       <div className="sheet__inner">
         <h1 className="sheet__title a11y-visually-hidden">{exhibitions.title}</h1>
-        <div
-          className="sheet__body a11y-visually-hidden"
-          dangerouslySetInnerHTML={{
-            __html: exhibitions.descriptionNode.childMarkdownRemark.html,
-          }}
-        />
+        <p className="sheet__lead">{exhibitions.subtitle}</p>
         <div className="sheet__gallery showcase">
           {exhibitions.gallery.map(({ fluid }) => (
             <LightboxItem fluid={fluid} key={fluid.src} />
@@ -35,14 +30,10 @@ export const query = graphql`
         ...GatsbyDatoCmsSeoMetaTags
       }
       title
+      subtitle
       gallery {
         fluid(maxWidth: 1200, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
-        }
-      }
-      descriptionNode {
-        childMarkdownRemark {
-          html
         }
       }
     }
