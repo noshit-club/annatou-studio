@@ -37,6 +37,9 @@ const TemplateWrapper = ({ children, location }) => {
 					datoCmsArtPage {
 						title
 					}
+					datoCmsExhibitionsPage {
+						title
+					}
 					datoCmsMaow {
 						title
 					}
