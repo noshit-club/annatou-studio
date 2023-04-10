@@ -86,7 +86,9 @@ const TemplateWrapper = ({ children, location }) => {
 									<Link to="/maow">{data.datoCmsMaow.title}</Link>
 								</li>
 								<li>
-									<Link to="/art">{data.datoCmsArtPage.title}</Link>
+									<a href="https://www.annatouceramic.com" target="_blank" rel="noopener noreferrer">
+										{data.datoCmsArtPage.title}
+									</a>
 								</li>
 								<li>
 									<Link to="/exhibitions">{data.datoCmsExhibitionsPage.title}</Link>
