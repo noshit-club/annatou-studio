@@ -4,3 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "14"
+  # Pin Python to 3.10 to avoid node-gyp from Node 14 toolchain using deprecated 'rU' mode on newer Python (3.11+ removes it)
+  # This prevents the sharp build failure (ValueError: invalid mode: 'rU').
+  PYTHON_VERSION = "3.10"
+
+  # Optional: speed up sharp install by skipping global libvips detection (uncomment if builds still compile sharp)
+  # SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
