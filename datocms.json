@@ -1,6 +1,6 @@
 {
-  "name": "Annatou Studio's Portfolio Website",
-  "description": "Annatou Studio's portfolio website built with Gatsby.js and DatoCMS source plugin",
+  "name": "Anna Touvron Studio",
+  "description": "Anna Touvron Studio website built with Gatsby.js and DatoCMS source plugin",
   "previewImage": "TBD",
   "datocmsProjectId": "26059",
   "deploymentType": "static",
