@@ -18,7 +18,7 @@
     z-index: 2
     transform: translate3d(-200px, 0, 0)
     transition: transform $animation-speed ease-in-out
-    padding: $gutter/2
+    padding: $gutter * 0.5
     background-color: $light-bg-color
 
     .container.is-open &
@@ -44,7 +44,7 @@
     display: block
     width: 27%
     min-width: 200px
-    padding: $gutter*3/2 $gutter
+    padding: $gutter * 1.5 $gutter
     background-color: $light-bg-color
 
   .container__body
@@ -59,7 +59,7 @@
 
 @media screen and (min-width: $laptop-medium)
   .container__sidebar
-    padding: $gutter*3/2
+    padding: $gutter * 1.5
   
   .sidebar 
     width: calc(27% - #{$gutter*3})

@@ -1,5 +1,7 @@
+// Rewritten clean version without math.div and with proper indentation
+
 .sheet
-  padding: $gutter $gutter/2
+  padding: $gutter $gutter * 0.5
   background-color: #f9f9f9
   min-height: 100%
 
@@ -9,13 +11,12 @@
 .sheet__title
   font-size: .875em
   text-transform: uppercase
-  margin-bottom: $gutter
   font-weight: bold
   color: $dark-grey
   line-height: 1
 
 .sheet__lead
-  font-size: $gutter/2
+  font-size: $gutter * 0.5
   margin-bottom: $gutter
   font-size: 1.25em
   font-family: $headings-font-family
@@ -38,24 +39,24 @@
   font-size: .8125em
 
   h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol
-    margin-bottom: $gutter*1/3
+    margin-bottom: $gutter * 0.33333333
 
     &:last-child
       margin-bottom: 0
 
   h1, h2, h3, h4, h5, h6
     font-weight: bold
-    margin: $gutter 0 $gutter*1/4
+    margin: $gutter 0 $gutter * 0.25
     color: $dark-grey
     text-transform: uppercase
     font-size: $base-font-size
 
   p
-    margin-bottom: $gutter/2
+    margin-bottom: $gutter * 0.5
 
   li
-    margin-left: $gutter/2
-    margin-bottom: $gutter/6
+    margin-left: $gutter * 0.5
+    margin-bottom: $gutter * 0.16666667
 
   ol li
     list-style-type: decimal
@@ -77,7 +78,7 @@
   height: 0
   overflow: hidden
   max-width: 100%
-  margin-bottom: $gutter*2/3
+  margin-bottom: $gutter * 0.66666667
 
   iframe,
   object,
@@ -116,33 +117,33 @@
 
 @media screen and (max-width: $tablet)
   .sheet
-    padding: $gutter/2
+    padding: $gutter * 0.5
 
   .sheet__body
-    margin-bottom: $gutter*2/3
+    margin-bottom: $gutter * 0.66666667
 
   .sheet__title,
   .sheet__lead
-    margin-bottom: $gutter/2
+    margin-bottom: $gutter * 0.5
 
   .sheet__lead
     font-size: 1em
 
   .sheet__gallery
     .gatsby-image-wrapper
-      margin-bottom: $gutter/2
+      margin-bottom: $gutter * 0.5
 
   .sheet__art, .sheet__exhibitions
     padding-right: 0
     .sheet__lead
-      padding-right: $gutter/2
+      padding-right: $gutter * 0.5
 
 @media screen and (min-width: $tablet)
   .sheet
-    padding: $gutter*3/2
+    padding: $gutter * 1.5
 
   .sheet__body p
-    margin-bottom: $gutter*2/3
+    margin-bottom: $gutter * 0.66666667
 
   .sheet__art, .sheet__exhibitions
     padding-right: $gutter*.83333333 !important
@@ -150,23 +151,22 @@
 @media screen and (min-width: $laptop-medium)
   .sheet
     padding-top: $gutter*2
-
-  &:not(.sheet__art):not(.sheet__exhibitions)
-    .sheet__inner
-      > *:not(.sheet__gallery)
-        max-width: 600px
+    &:not(.sheet__art):not(.sheet__exhibitions)
+      .sheet__inner
+        > *:not(.sheet__gallery)
+          max-width: 600px
 
   .sheet__maow
     .sheet__body
       p
         img
           display: block
-          width: calc(50% - #{$gutter/3})
+          width: calc(50% - #{$gutter * 0.33333333})
           float: left
           margin-bottom: 0
 
           &:first-child
-            margin-right: $gutter/3
+            margin-right: $gutter * 0.33333333
 
           &:last-child
-            margin-left: $gutter/3
+            margin-left: $gutter * 0.33333333
