@@ -113,7 +113,7 @@ const TemplateWrapper = ({ children, location }) => {
                 </li>
                 <li>
                   <a
-                    href="https://www.annatouceramic.com"
+                    href="https://atelier-tou.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
