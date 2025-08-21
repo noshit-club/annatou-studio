@@ -22,6 +22,7 @@ const TemplateWrapper = ({ children, location }) => {
             }
           }
           datoCmsHome {
+            title
             seoMetaTags {
               ...GatsbyDatoCmsSeoMetaTags
             }
@@ -35,9 +36,6 @@ const TemplateWrapper = ({ children, location }) => {
             title
           }
           datoCmsArtPage {
-            title
-          }
-          datoCmsExhibitionsPage {
             title
           }
           datoCmsMaow {
@@ -101,7 +99,8 @@ const TemplateWrapper = ({ children, location }) => {
                           }
                           to="/"
                         >
-                          Design
+                          {(data.datoCmsHome && data.datoCmsHome.title) ||
+                            "Design"}
                         </Link>
                       );
                     }}
@@ -121,13 +120,6 @@ const TemplateWrapper = ({ children, location }) => {
                     {(data.datoCmsArtPage && data.datoCmsArtPage.title) ||
                       "Art"}
                   </a>
-                </li>
-                <li>
-                  <Link to="/exhibitions">
-                    {(data.datoCmsExhibitionsPage &&
-                      data.datoCmsExhibitionsPage.title) ||
-                      "Exhibitions"}
-                  </Link>
                 </li>
                 <li>
                   <Link to="/about">
