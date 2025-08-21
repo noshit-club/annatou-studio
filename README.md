@@ -1,6 +1,6 @@
-# Annatou Studio's Portfolio Website
+# Anna Touvron's Portfolio Website
 
-This repo contains a static website written with [GatsbyJS](https://www.gatsbyjs.org/), integrated with content coming from [DatoCMS](https://www.datocms.com) and show the works of Annatou Studio.
+This repo contains a static website written with [GatsbyJS](https://www.gatsbyjs.org/), integrated with content coming from [DatoCMS](https://www.datocms.com) and show the works of Anna Touvron.
 
 ![Preview](preview.png)
 

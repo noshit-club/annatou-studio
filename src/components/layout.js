@@ -148,7 +148,7 @@ const TemplateWrapper = ({ children, location }) => {
                     +32 (0)493 85 91 06
                   </a>
                 </p>
-                <p>{new Date().getFullYear()} © Annatou Studio</p>
+                <p>{new Date().getFullYear()} © Anna Touvron</p>
 
                 <p className="sidebar__social">
                   {data.allDatoCmsSocialProfile.edges.map(
