@@ -172,17 +172,15 @@ const TemplateWrapper = ({ children, location }) => {
               </div>
             </div>
           </div>
-          <div className="container__body">
+          <div
+            className="container__body"
+            onClick={(e) => {
+              e.preventDefault();
+              showMenu && setShowMenu(false);
+            }}
+          >
             <div className="container__mobile-header">
               <div className="mobile-header">
-                <div className="mobile-header__menu">
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setShowMenu(!showMenu);
-                    }}
-                  />
-                </div>
                 <div className="mobile-header__logo">
                   <Link to="/">
                     <img
@@ -192,6 +190,39 @@ const TemplateWrapper = ({ children, location }) => {
                       height="32"
                     />
                   </Link>
+                </div>
+                <div className="mobile-header__menu">
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowMenu(!showMenu);
+                    }}
+                  >
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 96 96"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M67 29.3H29C27.6 29.3 26.5 30.4 26.5 31.8C26.5 33.2 27.6 34.3 29 34.3H67C68.4 34.3 69.5 33.2 69.5 31.8C69.5 30.4 68.4 29.3 67 29.3Z"
+                        fill="#0000ff"
+                      />
+                      <path
+                        d="M67 45.5H29C27.6 45.5 26.5 46.6 26.5 48C26.5 49.4 27.6 50.5 29 50.5H67C68.4 50.5 69.5 49.4 69.5 48C69.5 46.6 68.4 45.5 67 45.5Z"
+                        fill="#0000ff"
+                      />
+                      <path
+                        d="M67 61.8H29C27.6 61.8 26.5 62.9 26.5 64.3C26.5 65.7 27.6 66.8 29 66.8H67C68.4 66.8 69.5 65.7 69.5 64.3C69.5 62.9 68.4 61.8 67 61.8Z"
+                        fill="#0000ff"
+                      />
+                      <path
+                        d="M48 0.5C21.8 0.5 0.5 21.8 0.5 48C0.5 74.2 21.8 95.5 48 95.5C74.2 95.5 95.5 74.2 95.5 48C95.5 21.8 74.2 0.5 48 0.5ZM48 90.6C24.5 90.6 5.4 71.5 5.4 48C5.4 24.5 24.5 5.4 48 5.4C71.5 5.4 90.6 24.5 90.6 48C90.6 71.5 71.5 90.6 48 90.6Z"
+                        fill="#0000ff"
+                      />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>

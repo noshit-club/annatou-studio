@@ -31,6 +31,22 @@
     .container.is-open &
       transform: translate3d(200px, 0, 0)
 
+.container .container__body::after
+  display: block
+  content: ''
+  position: absolute
+  z-index: 10
+  inset: 0; 
+  background: #0000ff
+  opacity: 0
+  pointer-events: none
+
+.container.is-open .container__body
+  filter: blur(2px)
+  &::after
+    opacity: .15
+    pointer-events: all
+
 @media screen and (min-width: $tablet)
   .container
     display: flex
